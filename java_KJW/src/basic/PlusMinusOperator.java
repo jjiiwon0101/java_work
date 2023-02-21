@@ -28,11 +28,13 @@ public class PlusMinusOperator {
 		System.out.println("z의 값: " + z);
 		
 		int a = 3;
-		int b = ++a + 5 * 3;
+		int b = a++ + 5 * 3;
+		int c = a;
 		
 		
-		System.out.println(b);
 		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);
 		
 
 	}

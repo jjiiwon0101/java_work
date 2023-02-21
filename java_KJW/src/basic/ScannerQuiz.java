@@ -26,10 +26,19 @@ public class ScannerQuiz {
 		int age = sc.nextInt();
 		sc.close();
 		
+		//int brith = 2023 - age;
+		
 		
 		System.out.printf("\n이름: %s\n", name);
 		System.out.printf("\n나이: %d\n", age);
 		System.out.printf("출생년도 %d\n", 2023 - age);
+		
+//		System.out.println("이름: " + name);
+//		System.out.println("나이: " + age + "세");
+//		System.out.println("출생년도: " + (2023-age) or birth + "년");
+		
+//		System.out.printf("이름: %s\n나이: %d세\n출생년도: %d년\n"
+//				, name, age, 2023-age);
 		
 
 	}

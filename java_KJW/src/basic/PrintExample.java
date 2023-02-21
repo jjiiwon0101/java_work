@@ -44,6 +44,9 @@ public class PrintExample {
 		double rate = 64.126;
 		System.out.printf("합격률은 %.2f%%입니다.", rate);
 		
+		
+		
+		
 
 	}
 
