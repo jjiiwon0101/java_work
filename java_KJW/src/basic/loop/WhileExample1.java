@@ -25,7 +25,7 @@ public class WhileExample1 {
 		System.out.println("-------------------------------------");
 		
 		//1 ~ 10까지의 누적합계
-		int i =1; //begin
+		int i = 1; //begin
 		int total = 0; //누적합을 기억해줄 변수
 		
 		while(i <= 10) { //end

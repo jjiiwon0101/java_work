@@ -11,7 +11,7 @@ public class WhileExample2 {
 		int n = 48;
 		while(n <= 150) {
 			if(n % 8 == 0) {
-				System.out.print(n + " ");
+			System.out.print(n + " "); //가로로 출력할때 공백도 포함시키자
 			}
 			n++;
 			
