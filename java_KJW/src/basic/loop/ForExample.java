@@ -11,7 +11,7 @@ public class ForExample {
 		while(i <= 10) {
 			total += i;
 			i++;
-			*/
+			
 		int total = 0;
 		
 		for(int i=1; i<=10; i++) { //; 마지막에 안붙음
@@ -32,19 +32,19 @@ public class ForExample {
 				
         //1~60000까지의 정수 중 177의 배수의 개수를 구해보세요 (for)
 	
-//		int ex = 0;
+		int ex = 0;
 		
-//		for(i=1; i<=60000; i++) {
-//			if(i % 177 == 0) {
-//				ex++;
-//			}
-//		} 
+		for(i=1; i<=60000; i++) {
+			if(i % 177 == 0) {
+				ex++;
+			}
+	} 
 		
-//		System.out.println("배수의 개수: " + ex + "개");
+		System.out.println("배수의 개수: " + ex + "개");
 		
 		
-//			}
-//		}
+		}
+		}
 		//입력받은 정수까지의 팩토리얼 값을 구하세요.
 		//팩토리얼) 5! -> 5 x 4 x 3 x 2 x 1
 		
@@ -53,7 +53,7 @@ public class ForExample {
 		int num = sc.nextInt();
 		
 		int fac = 1; 
-		for(int i=1; i<=num, i++) {
+		for(int i=1; i<=num; i++) {
 			fac *= i;
 		
 		}
@@ -61,6 +61,7 @@ public class ForExample {
 
 	}
 
+		
 		}
 	
 
