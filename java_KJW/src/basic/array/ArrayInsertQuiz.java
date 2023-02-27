@@ -3,8 +3,8 @@ package basic.array;
 import java.util.Scanner;
 
 public class ArrayInsertQuiz {
-
 	public static void main(String[] args) {
+
 		/*
         1. String 배열을 생성하세요. (foods)
         크기는 넉넉하게 50개로 지정하겠습니다.
@@ -26,33 +26,74 @@ public class ArrayInsertQuiz {
 		Scanner sc = new Scanner(System.in);
 		String [] foods = new String [50];
 		
-		System.out.println("음식을 입력하세요: ");
+	    System.out.println("음식을 입력하세요: ");
 		System.out.println("'배불러'를 입력하시면 종료됩니다.");
-		for(int i=0; i<foods.length; i++) {
+		outer: for(int i=0; i<foods.length; i++) {
 			
 			System.out.println("> ");
 			String de = sc.next();
 			
-			if(de.equals("배불러")){
-				
+			outer: if(de.equals("배불러")){
 				System.out.print("입력을 종료합니다.");
 				break;
-			}else if(foods.equals(foods[i])) {
-				System.out.println();
-			} foods[i] = de;
+			} 
+		    int j;
+			for(j=0; j<foods.length; j++) {
+				if(de.equals(foods[j])) {
+					System.out.println("이미 존재하는 음식입니다.");
+					i--; //반드시, i++은 회차가 들어가면 
+					continue outer; //컨티뉴는 변수를 하나 까야만 가능하다 
+				}
+			}
 			
+				foods[i] = de;
+			}
 			
 		}
+			
 		
-		System.out.println("-------------------------------");
-		System.out.print("내가 먹고 싶은 음식들은?: ");
+		
+//		System.out.println("-------------------------------");
+/*		System.out.print("내가 먹고 싶은 음식들은?: ");
 		for(String f : foods) {
 			if(f == null) break;
-			System.out.print(f + " ");
-			
-		} 
+
+	System.out.print(f + " ");}
+	*/	
 		
+			
+		 
+		
+		
+		
+		
+		
+		
+		
+		
+	        Scanner sc = new Scanner (System.in);
+	        String[] names = new String[6]
 
+	        for(int i=0; i<foods.length; i++) {
+	            System.out.print("이름을 입력하세요: ");
+	            String name = sc.next();
 
-	} 
+	            if(name.equals("그만")) {
+	                System.out.println("입력을 종료합니다.");
+	                break;
+	            }
+
+//	            names[i] = name;
+	        }
+
+	        System.out.println("-----------------------");
+	        System.out.print("입력받은 이름: ");
+	        for(String n : foods) {
+	            if (n == null) break;
+
+	            System.out.print(n + " ");
+	        }
 }
+
+	
+

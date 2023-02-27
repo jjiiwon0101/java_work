@@ -23,7 +23,7 @@ public class EnhancedForLoop {
 		}
 		*/
 		
-		for(String day : week) {
+		for(String day : week) { //week에 있는 숫자들을 day로 들여온다
 			System.out.println(day + "요일 좋아~!");
 		}
 		
