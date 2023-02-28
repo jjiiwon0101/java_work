@@ -31,7 +31,7 @@ public class ArrayInsert {
 			System.out.print(n + " ");
 		}
 
-//		sc.close();
+		sc.close();
 	}
 
 	/*

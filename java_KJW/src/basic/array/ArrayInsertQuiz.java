@@ -60,15 +60,7 @@ public class ArrayInsertQuiz {
 
 	System.out.print(f + " ");}
 	*/	
-		
-			
-		 
-		
-		
-		
-		
-		
-		
+
 		
 		
 	        Scanner sc = new Scanner (System.in);

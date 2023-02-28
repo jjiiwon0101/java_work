@@ -7,27 +7,30 @@ public class Quiz01 {
 
 
 	public static void main(String[] args) {
-		//이름 입력하는 문제
-		Scanner sc = new Scanner(System.in);
-		String [] names = new String[6];
+		//1. 문학 영어 사회탐구1, 사회탐구 2 성적을 입력받아 총점과 평균을 구하세요.
 		
-		for(int i = 0; i<names.length; i++) {
-			System.out.print("이름을 입력하세요: ");
-			String name = sc.next();
-			
-			if(name.equals("그만")) {
-				System.out.println("종료합니다.");
-				break;
-				
-			}
-			names[i]=name;
-		}
-		System.out.println("입력받은 네임: ");
-		for(String n : names) {
-			if(n == null) break;
-			System.out.println(n + " ");
-				
-			}
+		Scanner sc = new Scanner(System.in);
+		String grade;
+		
+		System.out.print("문학 점수: ");
+		double test1 = sc.nextDouble();
+	
+		System.out.print("영어 점수: ");
+		double test2 = sc.nextDouble();
+		
+		System.out.print("사회탐구1 점수: ");
+		double test3 = sc.nextDouble();
+		
+		System.out.print("사회탐구2 점수: ");
+		double test4 = sc.nextDouble();
+		
+		
+		double score = (test1+test2+test3+test4)/4.0;
+		System.out.printf("평균점수는 %.2f"+"입니다.",score);
+
+		
+		
+		
 		}
 		
 	}
