@@ -24,15 +24,21 @@ package basic.method;
 public class MethodExample1 {
 	
 	//메서드의 선언 (static은 뒤에서 알려드릴게요. 지금은 없다고 생각하세요.)
-	static int calcTotal(int x) {
+	static int calcTotal(int x) {//매서드의 이름
 		int total=0;
-		for(int i=1; i<x; i++) {
+		for(int i=1; i<=x; i++) {
 			total += i;
 		}
 		return total;
 	}
 
 	public static void main(String[] args) {
+		
+		int total = calcTotal(10); //int total = 55;
+		System.out.println(total);
+		//-> 값이 바로 나옴
+		System.out.println("1~100까지의 누적합: " + calcTotal(100));
+		
 
 	}
 
