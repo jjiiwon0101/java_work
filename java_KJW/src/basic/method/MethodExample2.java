@@ -22,7 +22,7 @@ import java.util.Calendar;
 	 () 내부를 비워둡니다. 그리고 호출할 때도 ()를 비워서 호출합니다.
  */
 
-public class MethodExaample2 {
+public class MethodExample2 {
 	//x부터 y까지의 누적합계를 구하는 메서드
 	static int aclcRangeTotal(int start, int end) {
 		int total =0;

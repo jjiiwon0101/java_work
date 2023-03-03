@@ -1,4 +1,4 @@
-package oop;
+package oop.basic;
 
 //객체 설계용 클래스 (라이브러리 클래스)는 메인 메서드를 작성하지 않습니다.
 public class Pen {

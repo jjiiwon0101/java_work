@@ -1,4 +1,7 @@
-package oop;
+package oop.basic;
+
+import java.awt.Menu;
+
 /*
 		 # 멤버 변수(field, class member variable)
 		 1. 클래스 블록에 선언된 변수를 의미합니다.
@@ -16,9 +19,21 @@ package oop;
  */
 
 public class MemberLocalVariable {
+	
+	int a; 
+	//멤버 변수, 필드라고 부름, 자동 초기화가 진행. 자동으로 값이 0으로 매겨짐
+	
+	void printNumber(int c) {//int c는 매개 변수, 메서드가 생성되어야함. 역할 뚜렷
+		int b=4; //지역변수, 위에가 호출되어야만 생성되고 메서드 내부에서 선언됐기 때문에
+		System.out.println("멤버 변수 a: " + a);
+		System.out.println("지역 변수 b: " + b);
+		System.out.println("매개 변수 a: " + c);
+		
+	}
 
 	public static void main(String[] args) {
-		
+		MemberLocalVariable m = new MemberLocalVariable();
+		m.printNumber(4);
 
 	}
 

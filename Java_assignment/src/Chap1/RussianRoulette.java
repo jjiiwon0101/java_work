@@ -23,32 +23,38 @@ public class RussianRoulette {
 		//플레이어 이름 등록하고
 		//배열을 하나 생성해서 플레이어들을 배치하시면 됩니다.
 		//배열의 크기는 참가자의 명수와 동일합니다.
-		Scanner sc = new Scanner(System.in);
-		System.out.print("게임 인원 2~4명 중 입력하세요: ");
-		System.out.println("--> ");
-		int number1 = sc.nextInt();	
+		Scanner sc = new Scanner(System.in); //입력해야하므로 스캐너입력
+		System.out.print("게임 인원 2~4명 중 입력하세요: "); //게임인원 입력창
+		System.out.println("--> "); 
+		int number1 = sc.nextInt();	//스캐너 입력시 변수 하나 지정(사람 수 변수)
 		
-		int count=0;
-		String[] name = new String[number1];
+		int count=0;//사람 수를 세어줘야하므로
+		String[] name = new String[number1]; 
+		//사람 이름을 입력하니 타입을 문자열인 스트링으로 배열 입력.
 	
 		
 		
-		for(int i=0; i<number1; i++) {
+		for(int i=0; i<number1; i++) {//몇번째 플레이어일지 숫자를 셈.
 			System.out.println("플레이어" + (i+1) + ":");
 			name[i] = sc.next();
-		}
+		} //배열은 0부터 세니 +1을 해서 1번째부터 나올수 있도록 지정. 그리고 
+		//네임이란 변수를 새로 지정, i의 값이 들어가도록 설정.
+		
 		
 		
 		
 		//실탄 개수 입력 (1미만 5 초과 안됨)
-		System.out.println("실탄 개수를 입력해주세요(1~5): ");
-		int bullet = sc.nextInt();
+		System.out.println("실탄 개수를 입력해주세요(1~5): "); //실탄개수 입력창
+		int bullet = sc.nextInt(); //실탄은 숫자로 나타내니 int타입으로 설정.
 		
-		boolean b6[] = new boolean[6];
+		boolean b6[] = new boolean[6];//불린타입으로 배열 지정. 6개의 칸을 만들어줌.
 		
 		System.out.println(Arrays.toString(b6));
+		//Arrays.toString에 b6변수를 넣어 실탄 개수 나오게하기.
 		System.out.println("플레이어: " + number1 + "명");
+		//플레이어 몇명이 입력됐는지 출력. number1은 사람 수 변수
 		System.out.println("총알: " + bullet + "개");
+		//총알의 개수 출력. bullet 변수는 위에 언급한 변수
 		System.out.println("플레이어 목록\n" + Arrays.toString(name));
 		
 		//실탄을 탄창에 배치합니다.
@@ -60,8 +66,11 @@ public class RussianRoulette {
 		//일부러 입력대기를 해서 흐름을 잠시 끊어줍니다.
 
 		boolean[] bulletPos = new boolean[6];
+		//실탄 들어갈 공간의 개수 배열, 변수는 bulletPos
 		int gun = (int) (Math.random()*2 + 1);
+		//난수 설정. 이유는 boolean으로 true,false로 장전됐느냐 안됐냐 따지는 단계
 		boolean flag = false;	
+		//
 		
 		while (true) {//총알의 위치 랜덤설정
 			int shoot = (int) (Math.random()*6); //0~5
