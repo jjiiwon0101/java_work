@@ -1,7 +1,7 @@
 package oop.poly.car;
 
 public class Car {
-	
+	//타이어 변수 설정
 	Tire frontLeft;
 	Tire frontRight;
 	Tire rearLeft;
