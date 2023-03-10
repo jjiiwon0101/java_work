@@ -21,16 +21,17 @@ public class ScoreMain {
          주의!) 입력이 중간에 그만두어진다면, 배열의 나머지 인덱스는
          모두 null로 가득 차 있습니다. (null.scoreInfo() -> 에러)
         */
-		Scanner sc = new Scanner(System.in);
-		Score[] se = new Score[100]; 
+		Scanner sc = new Scanner(System.in); //입력받음
+		Score[] se = new Score[100]; //배열이 100번까지 정해져 있음
 		
-		for(int i=0; i<100; i++) {
+		for(int i=0; i<100; i++) {//일반for문: 인덱스 사용해야해서
 			System.out.println("--------------------");
+			
 			System.out.print("이름: ");
 			String name = sc.next();
 			if(name.equals("그만")) {
 				System.out.println("반복문을 종료합니다.");
-				break;
+				break;//break가 for문안에서 반복문을 종료시켜줌.
 			}
 			
 			System.out.print("국어점수: ");
@@ -43,11 +44,19 @@ public class ScoreMain {
 			int math = sc.nextInt();
 			
 			Score s = new Score();
-			s.score(name, korean, english, math);
-			se[i]=s;
+			s.score(name, korean, english, math);//
+			se[i]=s;//저장하기 위해 작성
+//			int sc = korean + english + math;
+//			double av = sc / 3.0;
 			
+//			scores[i] = new Score(name,korean,english,math,sc,av);
+			//입력 반복문
+//			for(Scores s: scores) {
+//			s.screInfo();
+			if(s==null) break;
 	
 		}
+		
 		int i=0; 
 		while(true) {
 			try {

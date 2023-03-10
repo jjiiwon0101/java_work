@@ -12,7 +12,7 @@ public class Score {
     - 캡슐화를 구현해서 작성해 주세요. (생성자는 맘대로 하세요.)
     */
 	
-	private String name;
+	private String name; //객체 생성
 	private int korean;
 	private int english;
 	private int math;
@@ -20,7 +20,7 @@ public class Score {
 	private double av;
 	
 	
-    public Score() {
+    public Score() { //메서드 생성
 	}
     
 	public void score(String name, int korean, int english, int math) {
@@ -29,7 +29,7 @@ public class Score {
 		this.english = english;
 		this.math = math;
 		
-	}
+	} //메서드 생성 후 객체에 
 
 	public String getName() {
 		return name;
