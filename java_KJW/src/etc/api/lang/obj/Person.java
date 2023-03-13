@@ -12,10 +12,10 @@ public class Person implements Cloneable {//extends는 여기서 자동으로 �
 	
 	
 	
-	@Override
-	public String toString() {
-		return "Person [name=" + name + ", age=" + age + "]";
-	}
+//	@Override
+//	public String toString() {
+//		return "Person ["name=" + name + ", age=" + age " ]" ];
+//	}
 	
 	@Override
 		public boolean equals(Object obj) {
