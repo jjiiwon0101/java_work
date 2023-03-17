@@ -11,13 +11,6 @@ public class MyCart {
 			this.money = money;
 		}
 		
-		public void buy(int i, int money) {
-			if(money<i) {
-				System.out.println("금액부족!!!");
-			}else {
-				return;
-			}
-		}
 		/*
 	    - public void buy(모든 상품을 전달할 수 있는 매개변수)
 	    
@@ -26,6 +19,14 @@ public class MyCart {
 	    - 가진 돈이 충분하면 물건의 가격을 money에서 빼고 
 	      add(상품)메서드 호출.
 	    */
+		public void buy(Product price) {
+			if(this.money <i) {
+				System.out.println("금액부족...");
+				return;
+			}else {
+			 
+			}
+		}
 		
 
 		private void add( ) {
