@@ -19,19 +19,17 @@ public class MyCart {
 	    - 가진 돈이 충분하면 물건의 가격을 money에서 빼고 
 	      add(상품)메서드 호출.
 	    */
-		public void buy(Product price) {
-			if(this.money <i) {
+		public void buy(Product all) {
+			if(this.money <all.price) {
 				System.out.println("금액부족...");
 				return;
 			}else {
-			 
+			 money -= all.price;
+			 add(all);
 			}
 		}
 		
 
-		private void add( ) {
-		
-		}
 		/*
 	    - private void add(모든 상품을 받을 수 있도록 선언)
 	    
@@ -44,13 +42,30 @@ public class MyCart {
 	     새로운 장바구니의 주소값을 기존의 장바구니와 바꿉니다.
 
 	    - 모든 로직이 완료되면 info() 메서드를 호출합니다.
-	    */
-		
-		
-		
-		public void info() {
+		 */
+
+		private void add(Product all) {
 			
+			cart[i]=all;
+			
+			if(i>=cart.length) {
+				i++;
+				Product temp[] = new
+				Product[cart.length*2];		
+				
+			    for(int j=0; j<cart.length; j++) {
+			    	temp[j]=cart[j];
+			    }
+			    cart = temp;
+			    
+			}
+			
+			info();
+			
+		
 		}
+		
+		
 		/*
 	    - public void info()
 	    
@@ -59,6 +74,21 @@ public class MyCart {
 	    - 남은 금액을 출력해야 합니다.
 	    
 	    - MyCart 선언이 완료되었다면 MainClass에서 buy메서드를 호출해 봅니다.
-	    */
-
+		 */
+		
+		public void info() {
+			
+			int total=0;
+			System.out.println("구매 상품 목록: ");
+			
+			for(int x=0; x<cart.length; x++) {
+				System.out.println(cart[x].name + "");
+				total+=cart[x].price;			
+				}
+			
+				System.out.println("\n총 가격: " + total + "원");
+					System.out.println("\n남은 금액: " + money +"원");
+					
+		}
+	
 }
