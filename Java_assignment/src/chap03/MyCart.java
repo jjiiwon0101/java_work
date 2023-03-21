@@ -19,17 +19,19 @@ public class MyCart {
 	    - 가진 돈이 충분하면 물건의 가격을 money에서 빼고 
 	      add(상품)메서드 호출.
 	    */
-		public void buy(Product price) {
-			if(this.money <i) {
+		public void buy(Product deliver) {
+			if(this.money < deliver.price) {
 				System.out.println("금액부족...");
 				return;
 			}else {
-			 
+			 this.money -= deliver.price;
+				add();
 			}
 		}
 		
 
 		private void add( ) {
+			
 		
 		}
 		/*
