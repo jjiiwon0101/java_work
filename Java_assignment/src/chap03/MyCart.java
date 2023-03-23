@@ -19,22 +19,19 @@ public class MyCart {
 	    - 가진 돈이 충분하면 물건의 가격을 money에서 빼고 
 	      add(상품)메서드 호출.
 	    */
-		public void buy(Product deliver) {
-			if(this.money < deliver.price) {
+		public void buy(Product all) {
+			if(this.money < all.price) {
 				System.out.println("금액부족...");
 				return;
 			}else {
-			 this.money -= deliver.price;
-				add();
+			 this.money -= all.price;
+				add(all);
 			}
 		}
 		
 
-		private void add( ) {
-			
-		
-		}
-		/*
+		private void add(Product all) {
+			/*
 	    - private void add(모든 상품을 받을 수 있도록 선언)
 	    
 	    - 매개변수로 전달된 상품을 장바구니에 담는다.
@@ -46,13 +43,39 @@ public class MyCart {
 	     새로운 장바구니의 주소값을 기존의 장바구니와 바꿉니다.
 
 	    - 모든 로직이 완료되면 info() 메서드를 호출합니다.
-	    */
+			 */
+			
+            cart[i]=all;
+			
+			if(i>=cart.length) {
+				i++;
+				Product temp[] = new
+				Product[cart.length*2];		
+				
+			    for(int j=0; j<cart.length; j++) {
+			    	temp[j]=cart[j];
+			    }
+			    cart = temp;
+			    
+			}
+			
+			info();
+		
+		}
 		
 		
 		
 		public void info() {
 			
+			int total=0;
+			System.out.println("구매 상품 목록: ");
+			
+			for(int x=0; x<cart.length; x++) {
+				System.out.println(cart[x].name + "");
+				total+=cart[x].price;	
 		}
+			System.out.println("\n총 가격: " + total + "원");
+			System.out.println("\n남은 금액: " + money +"원");
 		/*
 	    - public void info()
 	    
@@ -62,5 +85,5 @@ public class MyCart {
 	    
 	    - MyCart 선언이 완료되었다면 MainClass에서 buy메서드를 호출해 봅니다.
 	    */
-
+		}
 }

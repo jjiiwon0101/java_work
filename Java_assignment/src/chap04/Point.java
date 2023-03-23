@@ -83,6 +83,8 @@ public class Point {
 			
 			 */
 			
+			System.out.println("학번: ");
+			
 			
 		}
 		
