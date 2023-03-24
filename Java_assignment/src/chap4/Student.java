@@ -1,4 +1,4 @@
-package chap04;
+package chap4;
 
 import java.util.Scanner;
 
@@ -35,16 +35,22 @@ public class Student {
 		혹시라도 정수가 아닌 다른 값이 들어올 시에 
 		예외처리를 해서, 다시 점수를 입력받을 수 있는
 		무한 루프를 구성해 주세요.
-		*/	
-		
-	    System.out.println("# 국어점수: ");
-	    int kor = sc.nextInt();
-	    System.out.println("# 영어점수: ");
-	    int eng = sc.nextInt();
-	    System.out.println("# 수학점수: ");
-	    int math = sc.nextInt();
-	    
-	  
+		*/
+		while(true) {
+			try {
+				System.out.println("국어: ");
+				this.kor = sc.nextInt();
+				System.out.println("영어: ");
+				this.eng = sc.nextInt();
+				System.out.println("수학: ");
+				this.math = sc.nextInt();
+				break;
+			} catch(Exception e) {
+				System.out.println("점수는 숫자로만 입력하세요!");
+				sc.nextLine();
+			}
+		}
+
 	}
 	
 	//총점, 평균, 학점을 계산하는 메서드
@@ -59,6 +65,7 @@ public class Student {
 		}
 
 		//학생의 성적 정보를 출력하는 메서드
+		//강제로 값을 설정할 때 공간을 만들어주는 printf sysout
 		public void outputStuInfo() {
 			System.out.printf("%4s %6s %6d점 %5d점 %7d점 %7d점 %7.2f점 %6s\n"
 					, this.stuId, this.name, this.kor, this.eng, 
